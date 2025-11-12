@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>个人读书笔记 - 首页</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- 只保留 Supabase 库的引入 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- 导航栏 -->
+    <nav class="bg-white shadow-sm border-b">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-xl font-bold text-blue-600">读书笔记</div>
+                <div class="flex space-x-6">
+                    <a href="index.html" class="text-blue-600 font-medium hover:text-blue-800 transition-colors">首页</a>
+                    <a href="books.html" class="text-gray-600 hover:text-blue-600 transition-colors">书籍列表</a>
+                    <a href="add-note.html" class="text-gray-600 hover:text-blue-600 transition-colors">添加笔记</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 主要内容区域 -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- 欢迎区域 -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4">欢迎来到读书笔记</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">记录阅读的每一刻，分享思想的火花</p>
+        </div>
+
+        <!-- 最近在读 -->
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">最近在读</h2>
+            <div id="recent-books" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- 动态加载的最近在读书籍 -->
+                <div class="text-center text-gray-500">加载中...</div>
+            </div>
+        </section>
+
+        <!-- 推荐分类 -->
+        <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">推荐分类</h2>
+            <div id="categories" class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <!-- 动态加载的分类 -->
+                <div class="text-center text-gray-500">加载中...</div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="js/index.js"></script>
+</body>
+</html>
